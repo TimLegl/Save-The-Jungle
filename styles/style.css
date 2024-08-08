@@ -267,8 +267,37 @@ svg {
   to {rotate: 180deg;}
 }
 
-@media (max-width: 655px) {
+/* TABLETS UND DARUNTER */
+@media (max-width: 768px) {
   .socials {
     margin-top: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.92rem;
+  }
+
+  h2 {
+    font-size: 1.54rem;
+  }
+
+  p, a, label, input::placeholder, input {
+    font-size: 1.15rem;
+  }
+
+  /* ANPASSEN */
+  section {
+    padding: 1rem;
+  }
+
+  section:first-of-type {
+    padding-top: calc(100px + 0.5rem);
+  }
+
+  form {
+    margin-top: 1rem;
   }
 }
