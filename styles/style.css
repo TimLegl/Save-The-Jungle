@@ -22,7 +22,6 @@ section {
   color: aliceblue;
   padding: 2rem;
   height: calc(100vh - 100px);
-  /* Schriftgröße passt sich an, bleibt aber zwischen 1rem und 3rem */
 }
 
 section img {
@@ -111,90 +110,6 @@ nav img {
   width: 100%;
 }
 
-/* Newsletter */
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-label {
-  font-weight: bold;
-  color: rgba(66, 94, 38);
-}
-
-input {
-  padding: 0.5rem 1rem;
-  width: 80vw;
-  margin: 0.5rem 0 1rem 0;
-  border: none;
-  box-shadow: 4px 4px 6px #444444;
-  background-color: transparent;
-  border-radius: 1.5rem;
-  outline: none;
-}
-
-button {
-  width: 200px;
-  border-radius: 1.5rem;
-  padding: 0.5rem;
-  background-color: rgba(66, 94, 38, 0.9);
-  border: none;
-  box-shadow: 4px 4px 6px #444444;
-
-  /* Übergang */
-  transition: scale 0.1s ease-in-out 0.1s;
-  transition: box-shadow 0.1s ease-in-out;
-
-}
-
-/* Endzustand */
-button:hover {
-  scale: 0.95;
-  box-shadow: none;
-}
-
-.hinweisRahmen {
-  border: 2px solid rgb(226, 20, 20);
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 1.5rem;
-  color: rgb(226, 20, 20);
-  width: 80vw;
-}
-
-
-.erfolgRahmen {
-  border: 2px solid rgb(66, 94, 38);
-  color: rgb(66, 94, 38);
-}
-
-
-footer {
-  padding: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: aliceblue;
-  flex-wrap: wrap;
-}
-
-footer ul {
-  display: flex;
-}
-
-.footer-nav {
-  gap: 2rem;
-}
-
-.socials {
-  display: flex;
-  gap: 20px;
-}
-
 /* TRANSITION */
 .menu-icon {
   transition: transform 1s ease;
@@ -252,7 +167,6 @@ svg {
 
   Kurzschreibweise
   animation: rotation 5s linear infinite;
-
   animation-name: rotation;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -267,10 +181,106 @@ svg {
   to {rotate: 180deg;}
 }
 
+/* Newsletter */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+label {
+  font-weight: bold;
+  color: rgba(66, 94, 38);
+}
+
+input {
+  padding: 0.5rem 1rem;
+  width: 80vw;
+  margin: 0.5rem 0 1rem 0;
+  border: none;
+  box-shadow: 4px 4px 6px #444444;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  outline: none;
+}
+
+button {
+  width: 200px;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgba(66, 94, 38, 0.9);
+  border: none;
+  box-shadow: 4px 4px 6px #444444;
+
+  /* Übergang */
+  transition: scale 0.1s ease-in-out 0.1s;
+  transition: box-shadow 0.1s ease-in-out;
+
+}
+
+/* Endzustand */
+button:hover {
+  scale: 0.95;
+  box-shadow: none;
+}
+
+.hinweisRahmen {
+  border: 2px solid rgb(226, 20, 20);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  color: rgb(226, 20, 20);
+  width: 80vw;
+}
+
+.erfolgRahmen {
+  border: 2px solid rgb(66, 94, 38);
+  color: rgb(66, 94, 38);
+}
+
+#contact img {
+  height: 50vh;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  flex-wrap: wrap;
+}
+
+footer ul {
+  display: flex;
+}
+
+.footer-nav {
+  gap: 2rem;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
 /* TABLETS UND DARUNTER */
 @media (max-width: 768px) {
+  #contact img {
+    height: 40vh;
+  }
+
+  p, a, label, input::placeholder, input {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 641px) {
   .socials {
-    margin-top: 20px;
+    padding-top: 2rem;
   }
 }
 
@@ -284,10 +294,6 @@ svg {
     font-size: 1.54rem;
   }
 
-  p, a, label, input::placeholder, input {
-    font-size: 1.15rem;
-  }
-
   /* ANPASSEN */
   section {
     padding: 1rem;
@@ -297,7 +303,4 @@ svg {
     padding-top: calc(100px + 0.5rem);
   }
 
-  form {
-    margin-top: 1rem;
-  }
 }
