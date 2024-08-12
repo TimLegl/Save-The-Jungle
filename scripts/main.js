@@ -48,12 +48,18 @@ function meineScrollFunktion(meinEvent) {
   // 'data-target'-Attribut selektieren
   const zielId = meinEvent.target.getAttribute("data-target");
 
+  // Dynamisch nav-Höhe ermitteln
+  const navHoehe = document.querySelector('nav').offsetHeight;
+
   // Elemente in Array in Variable speichern
   const scrollElement = sections[zielId];
   // Wenn Element aus Array "sections" geklickt wird
   if (scrollElement) {
     // Scrolle in Sichtbereich des Elements
-    scrollElement.scrollIntoView({ behavior: 'smooth', block: "end"});
+    // scrollElement.scrollIntoView({ behavior: 'smooth', block: "end"});
+    window.scrollTo({
+      top: scrollElement.offsetTop - navHoehe, behavior: "smooth"
+    });
   }
 }
 
