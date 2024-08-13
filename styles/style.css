@@ -116,6 +116,10 @@ nav img {
   display: flex;
 }
 
+.panda-icon {
+  display: flex;
+}
+
 svg {
   font-size: 3rem;
 }
@@ -133,15 +137,13 @@ svg {
   align-items: center;
 
   top: 100px;
-  /*
+  /* Alternativ
   background-color: rgba(42, 37, 27, 0.9);
   background-color: rgba(68, 68, 68, 0.9);
   background-color: rgba(240, 248, 255, 0.9);
   background-color: rgba(32, 75, 47, 0.9);
   */
   background-color: rgba(66, 94, 38, 0.9);
-  
-  /* background-color: rgba(240, 248, 255, 0.95); */
   right: -200px;
   width: 200px;
   color: aliceblue;
@@ -153,25 +155,9 @@ svg {
   transition: 1s;
 }
 
-/* MUSS ENTFERNT BLEIBEN, SONST REAGIERT TRANSITION NICHT */
-/* .nav-hide {
-  display: none;
-} */
-
 .nav-show {
   right: 0;
 }
-/* .menu-icon:hover {
-
-  Kurzschreibweise
-  animation: rotation 5s linear infinite;
-  animation-name: rotation;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0.1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-} */
 
 /* KEYFRAMES */
 @keyframes rotation {
@@ -239,7 +225,7 @@ button:hover {
 }
 
 #contact img {
-  height: 50vh;
+  max-height: 50vh;
 }
 
 footer {
@@ -268,7 +254,7 @@ footer ul {
 /* TABLETS UND DARUNTER */
 @media (max-width: 768px) {
   #contact img {
-    height: 40vh;
+    max-height: 40vh;
   }
 
   h1 {
@@ -351,7 +337,4 @@ footer ul {
   .footer-nav {
     gap: 1.5rem;
   }
-
 }
-
-/* SCROLL FUNKTION ANPASSEN */
