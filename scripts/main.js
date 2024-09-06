@@ -92,11 +92,11 @@ absendenElement.addEventListener("click", function(dasAbsendenEvent){
   // Meldung wenn Feld leer
   if(inputFeld.value == ""){
     // inputFeld.value = "Das Feld darf nicht leer sein.";
-    hinweisEinblenden("Feld darf nicht leer sein.");
+    hinweisEinblenden("The field cannot be empty.");
   } else if(!emailMuster.test(inputFeld.value)){
-    hinweisEinblenden("Bitte gültige E-Mail eingeben.")
+    hinweisEinblenden("Please enter a valid email.")
   } else {
-    hinweisEinblenden("Sie wurden registriert.\nBitte bestätigen Sie den Link in Ihrem E-Mail Postfach.", true)
+    hinweisEinblenden("You have been registered.\nPlease confirm the link in your email inbox.", true)
   };
 });
 //Neue Klasse gruenHinweis: Im else-Block wird die Funktion hinweisEinblenden mit einem zusätzlichen Parameter true aufgerufen, um anzugeben, dass der Hinweis grün dargestellt werden soll.
@@ -129,5 +129,3 @@ const hinweisEinblenden = (meldung, erfolgreicheEingabe = false) => {
   // Container nach inputFeld anzeigen
   inputFeld.insertAdjacentElement("afterend", hinweisContainer);
 }
-
-
